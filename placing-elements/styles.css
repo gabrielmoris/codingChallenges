@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: dimgrey;
+    color: white;
+    margin: 0;
+}
+
+header {
+    padding: 10px;
+    margin: 0;
+    background-color: white;
+    height: 70px;
+}
+
+#logo {
+    float: left; /*Not recomendable to do in this way */
+}
+
+#menu {
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+/* better way instead floating
+div {
+    display: inline-block;
+} */
+.container {
+    width: 80vw;
+    height: 80vh;
+    background-color: tomato;
+    border: 2px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
+.icon{
+    height: 50px;
+}
+
+h3 {
+    margin: 0;
+}
+
+h3:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h3:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+h3:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+h3:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
