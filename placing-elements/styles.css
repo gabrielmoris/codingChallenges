@@ -1,11 +1,13 @@
 *{
     box-sizing: border-box;
+    font-family: serif;
 }
 
 body {
-    background-color: dimgrey;
+    background-color: lightgray;
     color: white;
     margin: 0;
+    position: relative;
 }
 
 header {
@@ -19,51 +21,35 @@ header {
     float: left; /*Not recomendable to do in this way */
 }
 
+ /* better way instead floating
+div {
+    display: inline-block;
+} */
+
 #menu {
     height: 50px;
     width: 50px;
     float: right;
 }
-/* better way instead floating
-div {
-    display: inline-block;
-} */
+
 .container {
-    /* width: 80vw;
-    height: 80vh; */
-    background-image: url(/images/spices.jpg);  
-    top:65px;
-    bottom: 52px;
-    left: 0;
-    right: 0;
-    position: absolute;
+    height: 85vh;
+    background-image: url(/images/spices.jpg);
+    margin-top: 0;
+    text-align: center;
+
 }
 
 .icon{
     height: 50px;
 }
+h1{
+    margin-top: 0;
+    padding-top: 300px;
+    font-size: 60px;
+}
 
-/* h3 {
-    margin: 0;
-} */
-
-/* h3:nth-child(1){
-    position: absolute;
-    top: 0;
-    left: 0;
+.little-img {
+    height: 100px;
+    width: auto;
 }
-h3:nth-child(2){
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-h3:nth-child(3){
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-h3:nth-child(4){
-    position: absolute;
-    bottom: 0;
-    right: 0;
-} */
