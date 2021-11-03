@@ -29,23 +29,25 @@ div {
     display: inline-block;
 } */
 .container {
-    width: 80vw;
-    height: 80vh;
-    background-color: tomato;
-    border: 2px solid black;
-    margin: 0 auto;
-    position: relative;
+    /* width: 80vw;
+    height: 80vh; */
+    background-image: url(/images/spices.jpg);  
+    top:65px;
+    bottom: 52px;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 
 .icon{
     height: 50px;
 }
 
-h3 {
+/* h3 {
     margin: 0;
-}
+} */
 
-h3:nth-child(1){
+/* h3:nth-child(1){
     position: absolute;
     top: 0;
     left: 0;
@@ -64,4 +66,4 @@ h3:nth-child(4){
     position: absolute;
     bottom: 0;
     right: 0;
-}
+} */
