@@ -39,10 +39,13 @@ console.log(erre);
 //EXERCISE 3
 
 function getLessThanZero (array){
-    const result = array.filter((item) => item < 0);
+var result = array.filter(function (item) {
+    return item < 0;
+});
+
     return result
 }
 
 
-   getLessThanZero([1, 2, -1, -90, 10]); //[-1, -90]
-   getLessThanZero([1, 2]); //[]
+   console.log(getLessThanZero([1, 2, -1, -90, 10])); //[-1, -90]
+   console.log(getLessThanZero([1, 2])); //[]
