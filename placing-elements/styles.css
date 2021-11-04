@@ -52,4 +52,16 @@ h1{
 .little-img {
     height: 100px;
     width: auto;
+    float: left;
+}
+
+.section-down{
+    width: 49%;
+    border: solid 1px red;
+    display: inline-block;
+}
+
+.info{
+        margin-top: 30px;
+        margin-bottom:30px;
 }
