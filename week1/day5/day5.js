@@ -8,7 +8,8 @@ function Rectangle(w, h) {
     };
 }
 
-function Square(w) { //here i dont need to specify height or width because i already call the function of getArea. NICE!
+function Square(w) {
+    //here i dont need to specify height or width because i already call the function of getArea. NICE!
     Rectangle.call(this, w, w);
 }
 
@@ -18,30 +19,39 @@ console.log(square.getArea()); //16
 var rect = new Rectangle(4, 5);
 console.log(rect.getArea()); //20
 
-
-
 //EXERCISE 2
 
 function invertCase(string) {
     var newString = "";
-    for (var i=0; i> string.length; i++){
-        if(string[i]===string[i].toUpperCase()){
-            newString = string[i].toLowerCase();
-        } else{
-            string[i].toLowerCase()
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] === string[i].toUpperCase()) {
+            newString += string[i].toLowerCase();
+        } else {
+            newString += string[i].toUpperCase();
         }
     }
     return newString;
 }
-console.log(invertCase("HOlaQUeTal"));
+console.log(invertCase("HellO UPPER lower!!"));
 
+//BONUS EXERCISE
 
-//for each caracher in string
+function Countdown(timer) {
+    this.timer = timer;
+}
 
+Countdown.prototype.start = function () {
+    console.log(this.timer);
+    this.timer--;
+    if (this.timer >= 0) {
+        setTimeout(
+            function () {
+                this.start();
+            }.bind(this),
+            1000
+        );
+    }
+};
+var countdown10 = new Countdown(10);
 
-
-
-
-// loop the caracters of the string use toUpperCase and toLowerCase
-
-//bonus, mirar ejercicios del 1 dia y usar settimeout. NO USAR FORLOOP o WHILELOOP
+countdown10.start();
