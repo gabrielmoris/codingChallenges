@@ -26,12 +26,22 @@ console.log(each({
    })); // logs 'the value of item 0 is a' and 'the value of item 1 is b'
 
 //EXERCISE 2
-
+// ARROW
+// function reverser(array) {
+//     var newArray = [];
+//     array.forEach((element) => newArray.unshift(element));
+//     return newArray;
+// }
+// NON ARROW
 function reverser(array) {
     var newArray = [];
-    array.forEach((element) => newArray.unshift(element));
+    array.forEach(function (element) {
+        newArray.unshift(element);
+    });
     return newArray;
 }
+
+var erre = [1, 2, 3, 4];
 var erre = [1, 2, 3, 4];
 console.log(reverser(erre));
 console.log(erre);
