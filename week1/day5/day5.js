@@ -3,7 +3,6 @@ function Rectangle(w, h) {
     this.width = w;
     this.height = h;
     this.getArea = function () {
-        // if (this.height)
         return this.width * this.height;
     };
 }
