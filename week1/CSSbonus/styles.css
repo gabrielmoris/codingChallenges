@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+
+/* div div{
+   height: 3px; 
+   background-color: tomato;
+} */
+
+.head {
+    position: relative;
+    left: 145px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    align-items: center;
+    background-color: tomato;
+}
+
+.arm {
+    position: relative;
+    left: 205px;
+    top: 4px;
+    height: 5px;
+    width: 200px;
+    background-color: tomato;
+    transform: rotate(15deg);
+    transform-origin: left; /*dice qué parte rota */
+}
+.arm2 {
+    position: relative;
+    left: 0;
+    height: 5px;
+    width: 200px;
+    transform: rotate(-15deg);
+    transform-origin: right;
+    background-color: tomato;
+}
+
+.body {
+    position: absolute;
+    background-color: tomato;
+    height: 5px;
+    width: 300px;
+    transform: rotate(90deg);
+    left: 53px;
+    top: 200px;
+}
+
+.leg {
+    position: absolute;
+    background-color: tomato;
+    height: 5px;
+    width: 200px;
+    transform: rotate(55deg);
+    transform-origin: left;
+    top:350px;
+    left: 203px;
+}
+
+.leg2 {
+    position: absolute;
+    background-color: tomato;
+    height: 5px;
+    width: 200px;
+    transform-origin: right;
+    transform: rotate(-55deg);
+    top: 350px;
+    left:2px;    
+}
+
+.head:hover {
+    top: 400px;
+    left: 20px;
+}
