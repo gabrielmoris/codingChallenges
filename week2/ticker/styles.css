@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+.ticker{
+    overflow: hidden;
+    border: 4px dotted midnightblue;
+    height: 1.5em;
+    position: relative;
+}
+
+.headlines{
+    position: absolute;
+    border: 3px dashed tomato;
+    white-space: nowrap;
+    left: 100%;
+}
+
+.headlines a {
+    padding-right: 40px;
+}
