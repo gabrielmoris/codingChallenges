@@ -1,0 +1,13 @@
+
+body{
+    /* background-color: black; */
+    background-image: url(/hacker.png);
+}
+
+textarea{
+    background-color: greenyellow;
+    margin-top: 15%;
+    margin-left: 35%;
+    width: 400px;
+    height: 200px;
+}
