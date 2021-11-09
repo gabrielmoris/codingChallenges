@@ -1,0 +1,11 @@
+body {
+    background-color: aquamarine;
+    position: relative;
+}
+#follow {
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 100px;
+}
