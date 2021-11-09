@@ -1,0 +1,10 @@
+body{
+    background-color: azure;
+}
+
+#diver{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: solid 3px black;
+}
