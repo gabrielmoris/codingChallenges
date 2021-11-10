@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placing Elements</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-        <div id="logo"><img src="/images/spiced.png" class="icon"></div>
-        <div id="menu"><img src="/images/hamburgermenu.svg"></div>
-        </nav>
-    </header>
-    <main class="container">
-        <h1>Welcome to <em>SPICED</em> and the Future.</h1>
-        <button>Get Started</button>
-    </main>
-    <div class="downContainer">
-        <section class="section-down  down-1">
-            <img src="images/cat.svg" class="little-img im-right"><p class="info"><strong>Best-in-class Features</strong><br>Nobody does this stuff better than us.<br>You can bet your life on that.</p>
-            <img src="/images/swim.svg" class="little-img im-right"><p class="info" ><strong>An Acquired Taste</strong><br>It may take a little while for you to <br>warm up to us but once you do you<br>will never want to switch.</p>
-        </section>
-        <section class="section-down">
-             <img src="/images/world.svg" class="little-img"><p class="info"><strong>Reliable Service</strong><br>You can count on us to help you<br>whenever you need it. We're talking<br>round the clock service.</p>
-            <img src="/images/columns.svg" class="little-img"><p class="info"><strong>No Limits</strong><br>There are absolute no limits. We do<br>not throttle. We do not cap.</p>
-        </section>
-    </div>
-    <footer>
-        <p class="footer_copyright">© 2016 Some Organization</p>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Placing Elements</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="overlay">
+            <div id="menu2">
+                <span id="close">X</span>
+                <a class="menu-link" href="#">Home</a>
+                <a class="menu-link" href="#">About Us</a>
+                <a class="menu-link" href="#">Contact</a>
+                <a class="menu-link" href="#">Courses</a>
+            </div>
+        </div>
+
+        <header>
+            <nav>
+                <div id="logo">
+                    <img src="/images/spiced.png" class="icon" />
+                </div>
+                <div id="menu"><img src="/images/hamburgermenu.svg" /></div>
+            </nav>
+        </header>
+        <main class="container">
+            <h1>Welcome to <em>SPICED</em> and the Future.</h1>
+            <button>Get Started</button>
+        </main>
+        <div class="downContainer">
+            <section class="section-down down-1">
+                <img src="images/cat.svg" class="little-img im-right" />
+                <p class="info">
+                    <strong>Best-in-class Features</strong><br />Nobody does
+                    this stuff better than us.<br />You can bet your life on
+                    that.
+                </p>
+                <img src="/images/swim.svg" class="little-img im-right" />
+                <p class="info">
+                    <strong>An Acquired Taste</strong><br />It may take a little
+                    while for you to <br />warm up to us but once you do you<br />will
+                    never want to switch.
+                </p>
+            </section>
+            <section class="section-down">
+                <img src="/images/world.svg" class="little-img" />
+                <p class="info">
+                    <strong>Reliable Service</strong><br />You can count on us
+                    to help you<br />whenever you need it. We're talking<br />round
+                    the clock service.
+                </p>
+                <img src="/images/columns.svg" class="little-img" />
+                <p class="info">
+                    <strong>No Limits</strong><br />There are absolute no
+                    limits. We do<br />not throttle. We do not cap.
+                </p>
+            </section>
+        </div>
+        <footer>
+            <p class="footer_copyright">© 2016 Some Organization</p>
+        </footer>
+        <script src="/script.js"></script>
+    </body>
 </html>
