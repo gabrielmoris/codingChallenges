@@ -20,3 +20,25 @@ body{
 .headlines a {
     padding-right: 40px;
 }
+
+.footerline a {
+    padding-right: 40px;
+}
+
+.footerline{
+    position: absolute;
+    border: 3px dashed lawngreen;
+    white-space: nowrap;
+    right: 100%;
+}
+
+.ticker2 {
+    overflow: hidden;
+    border: 4px dotted darkorange;
+    height: 1.5em;
+    position: relative;
+}
+
+.fill-content{
+    height: 824px;
+}
