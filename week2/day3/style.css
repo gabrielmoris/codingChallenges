@@ -1,0 +1,8 @@
+canvas {
+    border: dashed 1px burlywood;
+}
+#canv{
+    display: none;
+    height: 100px;
+    width: auto;
+}
