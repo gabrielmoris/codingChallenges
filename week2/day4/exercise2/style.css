@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    height: 70px;
+    background-color: lawngreen;
+    width: 100%;
+}
+
+footer {
+    height: 30px;
+    background-color: mediumseagreen;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    flex-grow: 2;
+    background-color: mediumslateblue;
+}
