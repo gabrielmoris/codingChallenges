@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.container2 {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+
+.item2 {
+    height: 150px;
+    width: 150px;
+}
+
+.firstdad {
+    background-color: gray;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.seconddad {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.thirddad {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.forthdad {
+    background-color: blueviolet;
+}
+
+.firstson {
+    background-color: orange;
+}
+
+.secondson {
+    background-color: yellow;
+}
+
+.thirdson {
+    background-color: green;
+}
+
+.fourthson {
+    background-color: pink;
+}
