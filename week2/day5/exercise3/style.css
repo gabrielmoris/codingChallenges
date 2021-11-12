@@ -1,0 +1,67 @@
+.container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px 1fr;
+    grid-template-rows: 300px 1fr;
+    /* border: solid 1px tomato; */
+}
+
+.container2 {
+    /* height: 300px;
+    width: 300px; */
+    margin: 10px;
+}
+
+/* .item2 {
+    height: 150px;
+    width: 150px;
+} */
+
+.firstdad {
+    background-color: gray;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+
+.seconddad {
+    background-color: black;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+
+.thirddad {
+    background-color: blue;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+
+.forthdad {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+
+.firstson {
+    background-color: orange;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.secondson {
+    background-color: yellow;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.thirdson {
+    background-color: green;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.fourthson {
+    background-color: pink;
+}
