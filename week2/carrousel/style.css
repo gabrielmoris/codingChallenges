@@ -20,11 +20,33 @@
 #kitties img.onscreen{
     transform: translateX(0%);
     transition-property: transform;
-    transition-duration: 3s;
+    transition-duration: 2s;
 }
 
 #kitties img.exit-left{
     transform: translateX(-100%);
     transition-property: transform;
-    transition-duration: 3s;
+    transition-duration: 2s;
+}
+
+.dot{
+    width: 25px;
+    height: 25px;
+    /* background-color: grey; */
+    border-radius: 50%;
+    border: solid 3px aliceblue;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#dots{
+    position: absolute;
+    top: 550px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.dot.on{
+    background-color: aliceblue;
 }
