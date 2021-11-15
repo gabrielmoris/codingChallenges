@@ -15,3 +15,11 @@
         boxMenu.classList.remove("on2");
     });
 })();
+
+setTimeout(function () {
+    $("#dialog").css("visibility", "visible");
+}, 1000);
+
+$("#close2").on("click", function () {
+    $("#dialog").css("visibility", "hidden");
+});

@@ -225,3 +225,35 @@ button:active {
         background-color: rgb(44, 44, 44);
     }
 }
+
+#dialog {
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    z-index: 100;
+    background-color: antiquewhite;
+    border: 2px solid;
+    color: black;
+    border-radius: 10%;
+    text-align: center;
+    top: 200px;
+    left: 550px;
+    visibility: hidden;
+}
+
+#dialog-text {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#close2 {
+    padding-left: 350px;
+    font-weight: bolder;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+#close2:hover {
+    color: red;
+}
