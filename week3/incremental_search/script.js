@@ -7,6 +7,7 @@
     searchField.on("input", function () {
         // understand what the user is typing
         var inputVal = searchField.val().toLowerCase();
+        var htmlFormCountries = "";
         // check against a list of countries for matches
         // we should get a list of countries, that match the user's input, never more than four.
         var matchResults = [];
@@ -24,7 +25,7 @@
         }
 
         // put up to four countries that match the user input on screen
-        var htmlFormCountries = "";
+
         for (var j = 0; j < matchResults.length; j++) {
             htmlFormCountries +=
                 "<p class='country'>" + matchResults[j] + "</p>";
@@ -32,8 +33,10 @@
         //inject the html into the container
         // resultsContainer.html(htmlFormCountries);
 
-        if (countriesLowerCase.indexOf(inputVal) < 0) {
+        if (matchResults.length === 0) {
+            // if (countriesLowerCase.indexOf(inputVal) < 0) {
             htmlFormCountries += "<p class='country'>" + "No results" + "</p>";
+            // }
         }
         // resultsContainer.html(htmlFormCountries);
         if (input.val() == "") {
@@ -51,6 +54,7 @@
 
     resultsContainer.on("click", "p", function (e) {
         var highlighted = $(".highlighted");
+        
         input.val(highlighted.text());
     });
 
@@ -87,7 +91,9 @@
         if (e.keyCode === 13) {
             for (var i = 0; i < p.length; i++) {
                 if (p.eq(i).hasClass("highlighted")) {
-                    input.val(p.eq(i).text());
+                    if (p.eq(i).text() !== "No results") {
+                        input.val(p.eq(i).text());
+                    }
                 }
             }
         }
