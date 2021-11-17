@@ -7,10 +7,9 @@ function askForNumber() {
 }
 
 var fn = function translateNumberToGerman() {
-    var number = askForNumber();
-    console.log(number);
     var solution = "";
     try {
+        var number = askForNumber();
         if (number == 1) {
             solution = "Eins.";
         } else if (number == 2) {
@@ -36,8 +35,8 @@ var fn = function translateNumberToGerman() {
     } catch (err) {
         
         console.log(err);
-    } finally {
         fn();
-    }
+    } 
+    fn();
 }
 fn();
