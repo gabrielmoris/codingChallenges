@@ -35,7 +35,7 @@
 
         if (matchResults.length === 0) {
             // if (countriesLowerCase.indexOf(inputVal) < 0) {
-            htmlFormCountries += "<p class='country'>" + "No results" + "</p>";
+            htmlFormCountries += "<p>" + "No results" + "</p>";
             // }
         }
         // resultsContainer.html(htmlFormCountries);
@@ -52,10 +52,9 @@
         target.addClass("highlighted");
     });
 
-    resultsContainer.on("click", "p", function (e) {
+    resultsContainer.on("click", "p.country", function (e) {
         var highlighted = $(".highlighted");
-        
-        input.val(highlighted.text());
+            input.val(highlighted.text());
     });
 
     doc.on("keydown", function (e) {
