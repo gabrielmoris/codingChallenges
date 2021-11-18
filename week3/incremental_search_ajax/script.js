@@ -3,48 +3,50 @@
     var resultsContainer = $(".results");
     var doc = $(document);
     var input = $("input");
+    var timeoutID;
 
     searchField.on("input", function () {
         var inputVal = searchField.val().toLowerCase();
+        clearTimeout(timeoutID);
+        timeoutID = window.setTimeout(input, 200);
+        function input() {
+            $.ajax({
+                url: "https://spicedworld.herokuapp.com/",
+                data: {
+                    q: inputVal,
+                },
+                success: function (countries) {
+                    if (searchField.val() === inputVal) {
+                        console.log(countries);
+                        var matchResults = [];
+                        for (var i = 0; i < countries.length; i++) {
+                            var countriesLowerCase = countries[i].toLowerCase();
 
-        $.ajax({
-            url: "https://spicedworld.herokuapp.com/",
-            data: {
-                q: inputVal,
-            },
-            success: function (countries) {
-                if (searchField.val() === inputVal) {
-                    console.log(countries);
-                    var matchResults = [];
-                    for (var i = 0; i < countries.length; i++) {
-                        var countriesLowerCase = countries[i].toLowerCase();
-
-                        if (countriesLowerCase.indexOf(inputVal) === 0) {
-                            matchResults.push(countries[i]);
+                            if (countriesLowerCase.indexOf(inputVal) === 0) {
+                                matchResults.push(countries[i]);
+                            }
                         }
-                    }
 
-                    var htmlFormCountries = "";
-                    for (var j = 0; j < matchResults.length; j++) {
-                        htmlFormCountries +=
-                            "<p class='country'>" + matchResults[j] + "</p>";
-                    }
+                        var htmlFormCountries = "";
+                        for (var j = 0; j < matchResults.length; j++) {
+                            htmlFormCountries +=
+                                "<p class='country'>" +
+                                matchResults[j] +
+                                "</p>";
+                        }
 
-                    resultsContainer.html(htmlFormCountries);
+                        resultsContainer.html(htmlFormCountries);
 
-                    if (matchResults.length === 0) {
-                        htmlFormCountries += "<p>" + "No results" + "</p>";
+                        if (matchResults.length === 0) {
+                            htmlFormCountries += "<p>" + "No results" + "</p>";
+                        }
+                        resultsContainer.html(htmlFormCountries);
+                    } else {
+                        console.log("results no longer needed");
                     }
-                    resultsContainer.html(htmlFormCountries);
-                    if (input.val() == "") {
-                        htmlFormCountries = "";
-                    }
-                    resultsContainer.html(htmlFormCountries);
-                } else {
-                    console.log("results no longer needed");
-                }
-            },
-        });
+                },
+            });
+        }
     });
 
     resultsContainer.on("mouseover", "p", function (e) {
