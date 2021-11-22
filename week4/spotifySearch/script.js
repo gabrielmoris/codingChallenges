@@ -22,6 +22,7 @@
                 if (response.items.length == 0) {
                     myHtml +=
                         "<div class='artist-results'>NO RESULTS FOUND</div>";
+                         $("#more-btn").css("visibility", "hidden");
                 } else {
                     for (var i = 0; i < response.items.length; i++) {
                         // console.log("response.items[i] " + response.items[i]);
@@ -56,10 +57,6 @@
                         $("#more-btn").html(
                             "<button class='more'>MORE RESULTS</button>"
                         );
-                    }
-                    if (nextUrl === null) {
-                        console.log("should hide btn");
-                        $("#more-btn").css("visibility", "hidden");
                     }
                 }
                 //put the html generated on the screen
