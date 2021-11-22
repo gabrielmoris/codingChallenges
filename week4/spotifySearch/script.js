@@ -22,7 +22,7 @@
                 if (response.items.length == 0) {
                     myHtml +=
                         "<div class='artist-results'>NO RESULTS FOUND</div>";
-                         $("#more-btn").css("visibility", "hidden");
+                    $("#more-btn").css("visibility", "hidden");
                 } else {
                     for (var i = 0; i < response.items.length; i++) {
                         // console.log("response.items[i] " + response.items[i]);
@@ -61,7 +61,9 @@
                 }
                 //put the html generated on the screen
                 // console.log(myImg);
-
+                $("#title").html(
+                    "<h2>Your results for: " + userInput + "</h2>"
+                );
                 $("#results-container").html(myHtml);
 
                 $("#more-btn").on("click", function () {
@@ -96,7 +98,7 @@
                                     response.items[i].name +
                                     "</div>";
                             }
-                             nextUrl =
+                            nextUrl =
                                 response.next &&
                                 response.next.replace(
                                     "https://api.spotify.com/v1/search",
