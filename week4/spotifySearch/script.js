@@ -41,8 +41,12 @@
                             imgUrl +
                             "'" +
                             ">" +
+                            "<a href=" +
+                            response.items[i].external_urls.spotify +
+                            " target='_blank'>" +
                             response.items[i].name +
-                            "</div>";
+                            "</a>";
+                        +"</div>";
                     }
                     //check if we have more than 20 results and doesnt show it
                     nextUrl =
@@ -95,8 +99,12 @@
                                     imgUrl +
                                     "'" +
                                     ">" +
+                                    "<a href=" +
+                                    response.items[i].external_urls.spotify +
+                                    " target='_blank'>" +
                                     response.items[i].name +
-                                    "</div>";
+                                    "</a>";
+                                +"</div>";
                             }
                             nextUrl =
                                 response.next &&
