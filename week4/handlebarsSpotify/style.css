@@ -1,0 +1,42 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: palegreen;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body div {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+input,
+button,
+select,
+option {
+    background-color: rgb(56, 62, 68);
+    color: white;
+}
+
+img {
+    height: 200px;
+    width: auto;
+    display: block;
+}
+
+.artist-results {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+}
+.card {
+    width: 400PX;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
