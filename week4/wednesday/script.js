@@ -46,17 +46,14 @@ function logInfo(city) {
 }
 
 //ES6
-function logInfo(...etc) {
-    const name,
-    const country,
-    const population,
-    ()=>{
+function logInfo(city) {
+    const { name, country, population: numPeople } = city;
+
     console.log(
         `${name} is in ${country} and has ${numPeople} inhabitants in it.`
-    )}
-};
-
- logInfo({ name: "Marseille", country: "France", population: 861635 });
+    );
+}
+logInfo({ name: "Marseille", country: "France", population: 861635 });
 //EXERCISE 4
 //ORIGINAL FUNCTION
 let getNameAndCountry = ({ name, country }) => [name, country];
