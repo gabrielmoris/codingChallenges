@@ -33,4 +33,37 @@ console.log(
         glueArray(array1, array2)
 );
 
+//Exercise 3
+
+//comming soon
+
+//exercise 4
+//ORIGINAL FUNCTION
+let getNameAndCountry = ({ name, country }) => [name, country];
+
+let getRelocatedCity = (city1, city2 = { country: "Germany" }) => {
+    let [, country] = getNameAndCountry(city2);
+    return {
+        ...city1,
+        country,
+    };
+};
+
+//OLD VERSION JS FUNCTION
+
+var GetNameAndCountry = function (name, country) {
+    (name = this.name), (country = this.country);
+};
+
+let GetRelocatedCity = function (city1, city2) {
+    if ((city2.country = "undefined")) {
+        city2 = {
+            country: "Germany",
+        };
+    } else {
+        this.country = city2.country;
+    }
+
+    return city1, city2.country;
+};
 
