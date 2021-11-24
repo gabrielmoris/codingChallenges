@@ -7,4 +7,30 @@ function arrayverser(array) {
     return revArr;
 }
 
-console.log(cucurucho, arrayverser(cucurucho));
+console.log(
+    "original array: " +
+        cucurucho +
+        " reversed array: " +
+        arrayverser(cucurucho)
+);
+
+//Exercise 2
+
+let array1 = [1, 2, 3];
+let array2 = [4, 5];
+
+function glueArray(arr1, arr2) {
+    let array3 = [...arr1, ...arr2];
+    return array3;
+}
+
+console.log(
+    "array 1: " +
+        array1 +
+        " array 2: " +
+        array2 +
+        " arrayglued: " +
+        glueArray(array1, array2)
+);
+
+
