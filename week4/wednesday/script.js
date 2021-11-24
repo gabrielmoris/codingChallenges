@@ -34,10 +34,30 @@ console.log(
 );
 
 //Exercise 3
+//ORIGINAL
+function logInfo(city) {
+    const name = city.name;
+    const country = city.country;
+    const numPeople = city.population;
 
-//comming soon
+    console.log(
+        `${name} is in ${country} and has ${numPeople} inhabitants in it.`
+    );
+}
 
-//exercise 4
+//ES6
+function logInfo(...etc) {
+    const name,
+    const country,
+    const population,
+    ()=>{
+    console.log(
+        `${name} is in ${country} and has ${numPeople} inhabitants in it.`
+    )}
+};
+
+ logInfo({ name: "Marseille", country: "France", population: 861635 });
+//EXERCISE 4
 //ORIGINAL FUNCTION
 let getNameAndCountry = ({ name, country }) => [name, country];
 
@@ -66,4 +86,3 @@ let GetRelocatedCity = function (city1, city2) {
 
     return city1, city2.country;
 };
-
