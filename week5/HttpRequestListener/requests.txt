@@ -1,0 +1,5 @@
+Mon Nov 29 2021 15:15:57 GMT+0100 (hora estándar de Europa central)	GET	/	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+Mon Nov 29 2021 15:15:57 GMT+0100 (hora estándar de Europa central)	GET	/favicon.ico	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+Mon Nov 29 2021 15:16:05 GMT+0100 (hora estándar de Europa central)	GET	/	PostmanRuntime/7.28.4
+Mon Nov 29 2021 15:16:24 GMT+0100 (hora estándar de Europa central)	POST	/	PostmanRuntime/7.28.4
+Mon Nov 29 2021 15:16:24 GMT+0100 (hora estándar de Europa central)	GET	/	PostmanRuntime/7.28.4

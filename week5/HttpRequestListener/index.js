@@ -31,23 +31,30 @@ const server = http.createServer(function (request, response) {
         });
         request.on("end", () => {
             console.log("BODY: ", body),
-            console.log("///////END OF BODY///////")
-            response.setHeader("Location", "/")
+                console.log("///////END OF BODY///////");
+            response.setHeader("Location", "/");
             response.statusCode = 302;
-            response.end(
-            );
+            response.end();
         });
     } else {
         response.statusCode = 405;
     }
 
-    // let dataToappend = new Date() + 
     // import { appendFile } from "fs";
+    let dataToappend =
+        new Date() +
+        "\t" +
+        request.method +
+        "\t" +
+        request.url +
+        "\t" +
+        request.headers["user-agent"] +
+        "\n";
 
-    // appendFile("message.txt", "data to append", (err) => {
-    //     if (err) throw err;
-    //     console.log('The "data to append" was appended to file!');
-    // });
+    fs.appendFile("requests.txt", dataToappend, (err) => {
+        if (err) throw err;
+        console.log('The "data to append" was appended to file!');
+    });
 });
 
 server.listen(PORT, () => console.log(`Server is all ears to you: ${PORT}`));

@@ -45,7 +45,7 @@ const server = http.createServer((req, res) => {
                 `<a href="http://localhost:8080"><h1 style="color:${parsedBody.color}">Hello ${parsedBody.first}</h1></a>`
             );
 
-            console.log(chalk[parsedBody.color](`hello: ${parsedBody.first}`));
+            console.log(chalk[parsedBody.color](`hello!! ${parsedBody.first}`));
             return res.end();
         });
     }
