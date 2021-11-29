@@ -13,6 +13,12 @@ const server = http.createServer(function (request, response) {
     console.log("///////////////////////////////////");
 
     if (request.method === "GET") {
+        if (request.url === "/requests.txt") {
+            response.statusCode = 200;
+            response.setHeader("Content-type", ["text/plain", "charset=UTF-8"]);
+            const rs = fs.createReadStream("requests.txt");
+            return rs.pipe(response);
+        }
         response.statusCode = 200;
         response.setHeader("Content-Type", "text/html");
         response.end(`<!doctype html>
@@ -57,4 +63,6 @@ const server = http.createServer(function (request, response) {
     });
 });
 
-server.listen(PORT, () => console.log(`Server is all ears to you: ${PORT}`));
+server.listen(PORT, () =>
+    console.log(`Server is all ears to you👂👂: ${PORT}`)
+);
