@@ -1,4 +1,5 @@
 const http = require("http");
+const fs = require("fs");
 const { clearScreenDown } = require("readline");
 const PORT = 8080;
 
@@ -39,6 +40,14 @@ const server = http.createServer(function (request, response) {
     } else {
         response.statusCode = 405;
     }
+
+    // let dataToappend = new Date() + 
+    // import { appendFile } from "fs";
+
+    // appendFile("message.txt", "data to append", (err) => {
+    //     if (err) throw err;
+    //     console.log('The "data to append" was appended to file!');
+    // });
 });
 
 server.listen(PORT, () => console.log(`Server is all ears to you: ${PORT}`));
