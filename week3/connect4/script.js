@@ -70,65 +70,41 @@
         var rowsIncol = $(".row" + i); //////////To check all the elements in the same row and i pass to checkvictory
         /////////////////// check here again...
         function checkDiagonal() {
-            var shameOnYou = [
-                [3, 8, 13, 18],
-                [4, 9, 14, 19],
-                [9, 14, 19, 24],
-                [5, 10, 15, 20],
-                [10, 15, 20, 25],
-                [15, 20, 25, 30],
-                [11, 16, 21, 26],
-                [16, 21, 26, 31],
-                [21, 26, 31, 36],
-                [17, 22, 27, 32],
-                [22, 27, 32, 37],
-                [23, 28, 33, 38],
-                [2, 9, 16, 23],
-                [1, 8, 15, 22],
-                [8, 15, 22, 29],
-                [0, 7, 14, 21],
-                [7, 14, 21, 28],
-                [12, 21, 28, 35],
-                [6, 13, 20, 27],
-                [13, 20, 27, 34],
-                [20, 27, 34, 41],
-                [12, 19, 26, 33],
-                [19, 26, 33, 40],
-                [18, 25, 32, 40],
-                [39, 32, 25, 18],
-                [40, 33, 26, 19],
-                [33, 26, 19, 12],
-                [41, 34, 27, 20],
-                [34, 27, 20, 13],
-                [27, 20, 13, 6],
-                [35, 28, 21, 14],
-                [28, 21, 14, 7],
-                [21, 14, 7, 0],
-                [29, 22, 15, 8],
-                [22, 15, 8, 1],
-                [23, 16, 9, 2],
-            ];
-            var everySlot = $(".board .column").children();
-            for (j = 0; j < shameOnYou.length; j++) {
-                var slot1 = everySlot.eq(shameOnYou[j][0]);
-                var slot2 = everySlot.eq(shameOnYou[j][1]);
-                var slot3 = everySlot.eq(shameOnYou[j][2]);
-                var slot4 = everySlot.eq(shameOnYou[j][3]);
-                if (
-                    slot1.hasClass("player1") &&
-                    slot2.hasClass("player1") &&
-                    slot3.hasClass("player1") &&
-                    slot4.hasClass("player1")
-                ) {
-                    return true;
-                }
-                if (
-                    slot1.hasClass("player2") &&
-                    slot2.hasClass("player2") &&
-                    slot3.hasClass("player2") &&
-                    slot4.hasClass("player2")
-                ) {
-                    return true;
+            var slots;
+            for (var col = 0; col < 7; col++) {
+                for (var row = 0; row < 6; row++) {
+                    slots = $(
+                        ".column:nth-child(" +
+                            (col + 1) +
+                            ") .slot:nth-child(" +
+                            (row + 1) +
+                            ")"
+                    );
+                    for (var i = 1; i <= 3; i++) {
+                        slots = slots.add(
+                            ".column:nth-child(" +
+                                (col + 1 + i) +
+                                ") .slot:nth-child(" +
+                                (row + 1 + i) +
+                                ")"
+                        );
+                    }
+                    if (checkForVictory(slots)) {
+                        return true;
+                    }
+                    slots = slots.eq(0);
+                    for (i = 1; i <= 3; i++) {
+                        slots = slots.add(
+                            ".column:nth-child(" +
+                                (col + 1 + i) +
+                                ") .slot:nth-child(" +
+                                (row + 1 - i) +
+                                ")"
+                        );
+                    }
+                    if (checkForVictory(slots)) {
+                        return true;
+                    }
                 }
             }
         }
