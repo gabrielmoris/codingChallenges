@@ -1,0 +1,18 @@
+*{
+    background-color: palegreen;
+}
+
+input, button, select, option{
+    background-color: rgb(56, 62, 68);
+    color: white
+}
+
+img{
+    height: 200px;
+    width: auto;
+    display: block;
+}
+
+.artist-results{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
