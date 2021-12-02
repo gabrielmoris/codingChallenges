@@ -28,7 +28,7 @@ app.use((req, res, next) => {
     if (req.cookies.checked === "true" || req.url === "/cookies") {
         next();
     } else {
-        res.cookie("URL", req.url);
+        res.cookie("URL", req.url, { maxAge: 190000 });
         res.redirect("/cookies");
     }
 }); //middleware
@@ -38,7 +38,7 @@ app.get("/cookies", (req, res) => {
 });
 app.post("/cookies", (req, res) => {
     if (req.body.checked === "on") {
-        res.cookie("checked", "true");
+        res.cookie("checked", "true", { maxAge: 90000 });
         res.redirect(req.cookies.URL);
     }
 });
