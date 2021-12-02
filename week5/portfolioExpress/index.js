@@ -6,6 +6,21 @@ const PORT = 8080;
 const fs = require("fs");
 const path = require("path");
 const { generateOverviewHtml } = require("./generateOverview");
+const basicAuth = require("basic-auth");
+
+const auth = function (req, res, next) {
+    const creds = basicAuth(req);
+    if (!creds || creds.name != "admin" || creds.pass != "0000") {
+        res.setHeader(
+            "WWW-Authenticate",
+            'Basic realm="Enter your credentials to see this stuff."'
+        );
+        res.sendStatus(401);
+    } else {
+        next();
+    }
+};
+
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
@@ -27,6 +42,7 @@ app.post("/cookies", (req, res) => {
         res.redirect(req.cookies.URL);
     }
 });
+app.use(`/secret`, auth);
 app.get("/", (req, res) => {
     res.send(generateOverviewHtml());
 });
