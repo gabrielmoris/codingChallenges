@@ -42,6 +42,7 @@ app.post("/cookies", (req, res) => {
         res.redirect(req.cookies.URL);
     }
 });
+
 app.use(`/secret`, auth);
 app.get("/", (req, res) => {
     res.send(generateOverviewHtml());
