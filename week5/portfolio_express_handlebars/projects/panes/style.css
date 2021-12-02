@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+#box {
+    overflow: hidden;
+    width: 500px;
+    height: 510px;
+    margin: 100px;
+    border: solid 5px grey;
+    z-index: 3;
+    position: relative;
+}
+#slide {
+    z-index: 100;
+    width: 10px;
+    height: 510px;
+    top: 0;
+    background-color: darkgrey;
+    position: absolute;
+    border: solid 1px grey;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
+
+#pan2 {
+    z-index: 10;
+}
+
+#pan1 {
+    overflow: hidden;
+    z-index: 9;
+    position: absolute;
+    width: 0px;
+}
+
+p {
+    padding-top: 240px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: grey;
+}

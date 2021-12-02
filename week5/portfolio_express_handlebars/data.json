@@ -1,0 +1,8 @@
+[
+    { "name": "Connect 4", "directory": "connect4" },
+    { "name": "Carousel", "directory": "carrousel" },
+    { "name": "Hungry Hippo Game", "directory": "hungryhippogame" },
+    { "name": "Panes", "directory": "panes" },
+    { "name": "Spotify Search", "directory": "spotify_search" },
+    { "name": "Ticker", "directory": "ticker" }
+]
