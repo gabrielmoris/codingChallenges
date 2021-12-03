@@ -1,0 +1,13 @@
+<nav>
+    <div id="menu2">
+        <a class="menu-link" href="/">Home</a>
+        {{#projects}}
+            <a class="menu-link" href="{{directory}}">{{name}}</a>
+        {{/projects}}
+    </div>
+</nav>
+<div class="container2">
+    <h1 class="h1project item">{{currproject.name}}</h1>
+    {{>image}}
+    {{>descrip}}
+</div>

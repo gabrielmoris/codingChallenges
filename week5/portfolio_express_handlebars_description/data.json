@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Connect 4",
+        "directory": "connect4",
+        "description": "This was my first big project with javascript. The most important thing I learn with this project was not only to manipulate the DOM but the logic to detect who wins."
+    },
+    {
+        "name": "Carousel",
+        "directory": "carrousel",
+        "description": "One of my first steps manipulating the DOM with javascript. Even if the carousel are not very popular this helped me to understand how to make animations with JAvascript, Html and CSS."
+    },
+    {
+        "name": "Hungry Hippo Game",
+        "directory": "hungryhippogame",
+        "description": "My first game using Javascript. I only can say, it is mor fun to make it than to play it. But here it is, at least here you can feed him, not like in a zoo."
+    },
+    {
+        "name": "Panes",
+        "directory": "panes",
+        "description": "Very interesting project where I improve how to manipulate the DOM with Javascript and also improved my skills with CSS."
+    },
+    {
+        "name": "Spotify Search",
+        "directory": "spotify_search",
+        "description": "My very first attempt with the API of spotify. I had fun and was very impressed with the result. Now i have my own spotify search. If add in the url '?scroll=infinite' you dont need to push the button for more results!"
+    },
+    {
+        "name": "Ticker",
+        "directory": "ticker",
+        "description": "This was my very first project manipulating the DOM with javascript. I only can say that I enjoyed a lot during the process of this project and I learnt a lot."
+    }
+]

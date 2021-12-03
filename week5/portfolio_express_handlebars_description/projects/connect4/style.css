@@ -1,0 +1,124 @@
+.slot {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hole {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 50px solid steelblue;
+    transform: translate(-40px, -40px);
+}
+
+.board {
+    display: flex;
+    animation-name: animation;
+    animation-duration: 2s;
+    padding-left: 50px;
+    padding-top: 100px;
+}
+
+.player1 {
+    background-color: orange;
+    /* border: solid 3px coral */
+}
+
+.player2 {
+    background-color: yellowgreen;
+}
+
+.followcoin {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.p1 {
+    background-color: orange;
+}
+
+.p2 {
+    background-color: yellowgreen;
+}
+
+body {
+    position: relative;
+    display: flex;
+    background-color: antiquewhite;
+}
+
+.hugediv {
+    visibility: hidden;
+    width: 100%;
+    height: 120%;
+    border-radius: 0%;
+    background-color: steelblue;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.hugetext {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-weight: bolder;
+    font-size: 100px;
+    padding-left: 25%;
+    z-index: 6000;
+}
+
+.text {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    padding-left: 100px;
+}
+
+button {
+    margin-left: 42%;
+    background-color: gold;
+    border: 2px solid orange;
+    padding: 5px 30px;
+    font-size: 40px;
+    /* font-family: serif; in body*/
+    color: peru;
+    border-radius: 50px;
+    font-weight: 700;
+    z-index: 6000;
+}
+
+button:hover {
+    background-color: peru;
+    color: gold;
+}
+
+button:active {
+    padding: 3px 28px;
+}
+@keyframes animation {
+    0% {
+        transform: translateY(-100%);
+    }
+    10% {
+        transform: translateY(0%);
+    }
+    20% {
+        transform: translateY(-20%);
+    }
+    30% {
+        transform: translateY(0%);
+    }
+    40% {
+        transform: translateY(-10%);
+    }
+    80% {
+        transform: translateY(0%);
+    }
+}

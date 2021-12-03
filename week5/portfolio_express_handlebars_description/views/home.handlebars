@@ -1,0 +1,16 @@
+<h1>Gabriel's projects:</h1>
+<div class="container">
+    {{#projects}}
+        <div class="item">
+            <a href="projects/{{directory}}"><img
+                    src="/{{directory}}/screenshot.png"
+                /></a>
+            {{!-- {{>image}} --}}
+            <a href="projects/{{directory}}">{{name}}</a>
+        </div>
+    {{/projects}}
+</div>
+<footer>©Gabriel chamorro 2021</footer>
+{{!-- {{>button
+text="about"
+emoji=false}} --}}
