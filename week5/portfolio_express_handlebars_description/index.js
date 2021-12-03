@@ -12,7 +12,12 @@ app.use(express.static(`${__dirname}\\public`));
 
 app.get("/projects/:project", (req, res) => {
     const requestedProject = req.params.project;
-
+    for (let i = 0; i < projects.length; i++) {
+        projects[i].selected = false;
+        if (requestedProject === projects[i].directory) {
+            projects[i].selected = true;
+        }
+    }
     const selectedProject = projects.find(
         (item) => item.directory == requestedProject
     );
