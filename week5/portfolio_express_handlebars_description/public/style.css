@@ -29,13 +29,14 @@ a {
 }
 
 img {
-    display: block;
-    height: 200px;
-    width: 300px;
     border: solid 5px beige;
     border-radius: 20%;
 }
-
+.imghome {
+    display: block;
+    height: 200px;
+    width: 300px;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -74,7 +75,7 @@ img {
 }
 
 #menu2 {
-    background-color: burlywood;
+    background-color: lightsteelblue;
     display: flex;
     color: chocolate;
 }
@@ -93,8 +94,13 @@ img {
 .description {
     color: rgb(51, 26, 5);
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     padding: 10px 50px 0 50px;
     /* line-height: 50px; */
+}
+
+.clickdescription {
+    display: inline-block;
+    padding-right: 20px;
 }

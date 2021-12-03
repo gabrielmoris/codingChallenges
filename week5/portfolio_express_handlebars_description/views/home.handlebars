@@ -2,15 +2,13 @@
 <div class="container">
     {{#projects}}
         <div class="item">
-            <a href="projects/{{directory}}"><img
+            {{!-- <a href="projects/{{directory}}"><img
                     src="/{{directory}}/screenshot.png"
-                /></a>
-            {{!-- {{>image}} --}}
+                /></a> --}}
+            {{>image
+            classhome=true}}
             <a href="projects/{{directory}}">{{name}}</a>
         </div>
     {{/projects}}
 </div>
 <footer>©Gabriel chamorro 2021</footer>
-{{!-- {{>button
-text="about"
-emoji=false}} --}}

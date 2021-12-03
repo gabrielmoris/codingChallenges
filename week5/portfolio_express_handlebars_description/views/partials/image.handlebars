@@ -1,4 +1,9 @@
-<a href="../{{currproject.directory}}"><img
-        class="img-currproject item"
-        src="/{{currproject.directory}}/screenshot.png"
-    /></a>
+{{#if classhome}}
+    <a href="projects/{{directory}}"><img
+            class="imghome"
+            src="/{{directory}}/screenshot.png"
+        /></a>{{else}}
+    <a href="../{{currproject.directory}}"><img
+            class="img-currproject item"
+            src="/{{currproject.directory}}/screenshot.png"
+        /></a>{{/if}}
