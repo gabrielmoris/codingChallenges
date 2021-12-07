@@ -47,10 +47,10 @@ function getToken(callbackGetToken) {
 //===============getTweets promisified =========
 module.exports.getTweets = util.promisify(getTweets);
 
-function getTweets(bearerToken, callbackGetTweets) {
+function getTweets(bearerToken, tweetSource, callbackGetTweets) {
     const optionsGet = {
         host: "api.twitter.com",
-        path: "/1.1/statuses/user_timeline.json?screen_name=nytimes&tweet_mode=extended",
+        path: `/1.1/statuses/user_timeline.json?screen_name=${tweetSource}&tweet_mode=extended`,
         method: "GET",
         headers: {
             Authorization: `Bearer ${bearerToken}`,
@@ -87,9 +87,11 @@ module.exports.filterTweets = function filterTweets(tweets) {
         if (tweets[i].entities.urls.length === 1) {
             let tweetsText = tweets[i].full_text;
             let tweetsUrl = tweets[i].entities.urls[0].url;
+            let tweetsSource = tweets[i].user.name;
+
             tweetsText = tweetsText.replace(tweetsUrl, "");
             let eachTweet = {
-                text: tweetsText,
+                text: `${tweetsSource}: ${tweetsText}`,
                 url: tweetsUrl,
             };
             dataTweets.push(eachTweet);
